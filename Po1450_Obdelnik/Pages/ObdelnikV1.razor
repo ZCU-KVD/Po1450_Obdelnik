@@ -1,0 +1,20 @@
+﻿@page "/obdelnik1"
+
+<PageTitle>Obdélník</PageTitle>
+
+<h1>Obdélník - přepočtení výsledku stiskem tlačítka</h1>
+<label for="a">Zadejte délku strany a:</label>
+<input type="number" id="a" @bind="obdelnik.StranaA" />
+<br />
+<label for="b">Zadejte délku strany b:</label>
+<input type="number" id="b" @bind="obdelnik.StranaB" />
+
+<br />
+<button @onclick="obdelnik.Vypocet" class="btn btn-primary" >Vypočítej</button>
+<hr />
+<p>Obvod obdélníku je: @obdelnik.Obvod</p>
+<p>Obsah obdélníku je: @obdelnik.Obsah</p>
+<p>Uhlopříčka je: @obdelnik.Uhlopricka</p>
+@code {
+	private Models.Obdelnik1 obdelnik = new Models.Obdelnik1();
+}
